@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - New Haven RP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+        
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        
+        .hero h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        
+        .content {
+            padding: 20px;
+        }
+        
+        .grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .grid-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 300px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .grid-item:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body class="fade-out">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to New Haven RP</h1>
+        <p>Your ultimate FiveM role-playing experience</p>
+    </section>
+
+    <main class="content">
+        <section class="grid">
+            <div class="grid-item">
+                <h2>Immersive Storytelling</h2>
+                <p>Join our community and dive into engaging stories with our dynamic and interactive role-playing system.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Active Community</h2>
+                <p>Become a part of a vibrant and supportive community where you can make friends and create unforgettable experiences.</p>
+            </div>
+            <div class="grid-item">
+                <h2>Server Events</h2>
+                <p>Participate in regular events that keep the gameplay exciting and help you level up your character.</p>
+            </div>
+        </section>
+
+        <section class="grid">
+            <div class="grid-item">
+                <h2>Rules</h2>
+                <p>Learn the dos and don'ts of our community to ensure a fair and enjoyable experience for everyone.</p>
+                <p><a href="rules.html">Read More</a></p>
+            </div>
+            <div class="grid-item">
+                <h2>FAQs</h2>
+                <p>Find answers to common questions about our role-playing system, community, and server regulations.</p>
+                <p><a href="faq.html">Read More</a></p>
+            </div>
+            <div class="grid-item">
+                <h2>Contact</h2>
+                <p>Have any questions or need assistance? Reach out to us and we'll be happy to help!</p>
+                <p><a href="contact.html">Get in Touch</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 New Haven. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Select all navigation links
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default link behavior
+                const targetUrl = this.href;
+
+                // Add fade-out class to body
+                document.body.classList.add('fade-out');
+
+                // Wait for the transition to end
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 500); // Match the transition duration
+            });
+        });
+
+        // Add event listener for page load to handle fade-in
+        window.addEventListener('load', () => {
+            document.body.classList.remove('fade-out');
+        });
+    </script>
+</body>
+</html>

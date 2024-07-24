@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - New Haven RP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body class="fade-out">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Frequently Asked Questions</h1>
+    </section>
+
+    <main class="content">
+        <section class="grid-item">
+            <ul>
+                <li>
+                    <h2>What is New Haven RP?</h2>
+                    <p>New Haven RP is a role-playing community designed for immersive, fun, and interactive FiveM RP.</p>
+                </li>
+                <li>
+                    <h2>How can I join New Haven RP?</h2>
+                    <p>Visit our <a href="https://discord.gg/PsxVMmTCqn">Discord</a> and there will be a guide on how to join labeled "How To Join". It will guide you through the joining process.</p>
+                </li>
+                <li>
+                    <h2>What are the rules for participating?</h2>
+                    <p>Our rules are outlined on the <a href="rules.html">Rules</a> page. Make sure to review them thoroughly before participating.</p>
+                </li>
+                <li>
+                    <h2>Is there a fee to join?</h2>
+                    <p>Currently, joining New Haven RP is free. However, donations are welcome to help support the community.</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 New Haven RP. All Rights Reserved.</p>
+    </footer>
+    
+<script>
+    // Select all navigation links
+    const navLinks = document.querySelectorAll('nav ul li a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default link behavior
+            const targetUrl = this.href;
+
+            // Add fade-out class to body
+            document.body.classList.add('fade-out');
+
+            // Wait for the transition to end
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 500); // Match the transition duration
+        });
+    });
+
+    // Add event listener for page load to handle fade-in
+    window.addEventListener('load', () => {
+        document.body.classList.remove('fade-out');
+    });
+</script>
+
+</body>
+</html>

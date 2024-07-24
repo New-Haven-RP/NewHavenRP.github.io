@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules - New Haven RP</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6347;
+        }
+
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            height: 30vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 800px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body class="fade-out">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="rules.html">Rules</a></li>
+                <li><a href="faq.html">FAQs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Community Rules</h1>
+    </section>
+
+    <main class="content">
+        <section class="grid-item">
+            <article>
+                <h2>General Rules</h2>
+                <ul>
+                    <li>Respect Everyone: Treat all members with respect. Harassment, discrimination, and hate speech will not be tolerated.</li>
+                    <li>No Spamming: Avoid spamming messages, images, or links. Keep the channels clutter-free and relevant.</li>
+                    <li>Follow the Law: Any activity that violates local, national, or international laws is prohibited.</li>
+                    <li>Privacy Matters: Do not share personal information about yourself or others. Respect the privacy of all members.</li>
+                    <li>No Impersonation: Do not impersonate other members, moderators, or administrators.</li>
+                    <li>Appropriate Content: Keep all content shared appropriate for the community. NSFW content is strictly prohibited.</li>
+                    <li>Racism in any form: We have a zero tolerance policy for any racism. No matter what ethnicity you come from, if you say slurs or anything you will be kicked and/or banned from the server.</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Discord Rules</h2>
+                <ul>
+                    <li>Follow Discord's Terms of Service: Adhere to Discord's <a href="https://discord.com/terms" target="_blank">Terms of Service</a> and <a href="https://discord.com/guidelines" target="_blank">Community Guidelines</a>.</li>
+                    <li>No Self-Promotion: Do not promote your own server, streams, or content without permission from the moderators. (unless in the <a href="https://discord.com/channels/994423958277455882/994423958986293309" target="_blank">Self Promo</a> section).</li>
+                    <li>Respect Moderators: Listen to and respect the decisions of the moderators. If you have an issue, address it privately and respectfully.</li>
+                    <li>Channel-Specific Rules: Follow the specific rules and guidelines provided in each channel’s description.</li>
+                    <li>No Malicious Links: Do not share links that are harmful, misleading, or disruptive.</li>
+                    <li>Use Appropriate Channels: Keep discussions in the relevant channels. Off-topic conversations should be moved to the appropriate channels.</li>
+                    <li>Racism in any form: We have a zero tolerance policy for any racism. No matter what ethnicity you come from, if you say slurs or anything you will be kicked and/or banned from the server.</li>
+                </ul>
+            </article>
+            <article>
+                <h2>Roleplay Rules</h2>
+                <ul>
+                    <li>Stay in Character: Maintain your character and roleplay narrative. Avoid breaking character unless necessary.</li>
+                    <li>No Metagaming: Do not use out-of-character information to influence in-character actions.</li>
+                    <li>No Powergaming: Avoid forcing actions on other players or creating overpowered characters.</li>
+                    <li>Consent is Key: Ensure all participants agree to the scenario, especially for sensitive topics.</li>
+                    <li>Roleplay Realistically: Keep actions within the realm of possibility and consistent with the roleplay setting.</li>
+                    <li>Respect Roleplay Spaces: Do not disrupt or interfere with ongoing roleplays unless invited.</li>
+                    <li>Racism in any form: We have a zero tolerance policy for any racism. No matter what ethnicity you come from, if you say slurs or anything you will be kicked and/or banned from the server.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 New Haven RP. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Select all navigation links
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the default link behavior
+                const targetUrl = this.href;
+
+                // Add fade-out class to body
+                document.body.classList.add('fade-out');
+
+                // Wait for the transition to end
+                setTimeout(() => {
+                    window.location.href = targetUrl;
+                }, 500); // Match the transition duration
+            });
+        });
+
+        // Add event listener for page load to handle fade-in
+        window.addEventListener('load', () => {
+            document.body.classList.remove('fade-out');
+        });
+    </script>
+</body>
+</html>

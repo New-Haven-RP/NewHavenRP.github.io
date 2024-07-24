@@ -1,0 +1,125 @@
+/* Ensure the body and html take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f4f8; /* Light background color for a clean look */
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease-in-out; /* Smooth transition */
+}
+
+body.fade-out {
+    opacity: 0; /* Fade-out effect */
+}
+
+/* Header styling */
+header {
+    background-color: #343a40; /* Dark, professional header */
+    color: #fff;
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #17a2b8; /* Fun accent color */
+}
+
+/* Main content area */
+main {
+    flex: 1; /* This makes the main content area take up the remaining space */
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Section styling */
+section {
+    background-color: #fff; /* White background for the content area */
+    color: #333; /* Dark text color for readability */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem 0;
+}
+
+section h1 {
+    text-align: center;
+    color: #343a40; /* Darker heading for emphasis */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+section h1:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background: #17a2b8; /* Fun accent color */
+    margin: 0.5rem auto 0;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+/* Button styling */
+button {
+    background-color: #17a2b8; /* Fun accent color */
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 1rem 0;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #138496; /* Slightly darker accent on hover */
+}
+
+/* Footer styling */
+footer {
+    background-color: #343a40; /* Dark footer */
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
